@@ -7,8 +7,7 @@ if (isset($_POST['guardar_cheque'])){
     $numero_cheque = $_POST['cheque'];
     $razon_social = $_POST['razon_social'];
     $cuit_librador = $_POST['cuit_librador'];
-    $originalDate = $_POST['vto'];
-    $vencimiento = date("d-m-Y", strtotime($originalDate));
+    $vencimiento = $_POST['vto'];
     $importe = $_POST['importe'];
     $propio = $_POST['propio'];
     $echeq = $_POST['echeq'];
