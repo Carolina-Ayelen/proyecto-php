@@ -95,7 +95,10 @@ $where = "";
               <td><?php echo $row['numero_cheque']; ?></td>
               <td><?php echo $row['nombre']; ?></td>
               <td><?php echo $row['cuit_librador']; ?></td>
-              <td><?php echo date("d-m-Y", strtotime($row['fecha_vto'])); ?></td>
+              <?php $mifecha= $row['fecha_vto'];
+                    $date = new DateTime($mifecha);
+              ?>
+              <td><?php echo $date->format('d-m-Y');?></td>
               <td><?php echo "$".$row['importe']; ?></td>
               <td><?php echo $row['propio']; ?></td>
               <td><?php echo $row['echeq']; ?></td>
